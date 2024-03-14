@@ -1,6 +1,4 @@
 import pandas as pd
-
-# Sample sales data
 sales_data = {
     'OrderDate': ['1-6-18', '1-23-18', '2-9-18', '2-26-18', '3-15-18', '4-1-18', '4-18-18', '5-5-18', '5-22-18', '6-8-18', '6-25-18', '7-12-18', '7-29-18', '8-15-18', '9-1-18', '9-18-18', '10-5-18', '10-22-18'],
     'Region': ['East', 'Central', 'Central', 'Central', 'West', 'East', 'Central', 'Central', 'West', 'East', 'Central', 'East', 'East', 'East', 'Central', 'East', 'Central', 'East'],
@@ -11,13 +9,7 @@ sales_data = {
     'Unit_price': [1198.00, 500.00, 1198.00, 225.00, 1198.00, 500.00, 1198.00, 1198.00, 1198.00, 500.00, 1198.00, 500.00, 500.00, 1198.00, 125.00, 58.50, 500.00, 225.00],
     'Sale_amt': [113810.00, 25000.00, 43128.00, 6075.00, 67088.00, 30000.00, 89850.00, 107820.00, 38336.00, 30000.00, 107820.00, 14500.00, 40500.00, 41930.00, 250.00, 936.00, 14000.00, 14400.00]
 }
-
-# Create DataFrame from sales data
 df = pd.DataFrame(sales_data)
-
-# Create pivot table to find total sale amount region-wise, manager-wise, and salesperson-wise
 pivot_table = pd.pivot_table(df, values='Sale_amt', index=['Region', 'Manager', 'SalesMan'], aggfunc='sum')
-
-# Display the pivot table
 print("Pivot Table - Total Sale Amount Region-wise, Manager-wise, and Salesperson-wise:")
 print(pivot_table)
