@@ -9,13 +9,9 @@ student_data = pd.DataFrame({
     'weight': [35, 32, 33, 30, 31, 32],
     'address': ['street1', 'street2', 'street3', 'street1', 'street2', 'street4']
 }, index=['S1', 'S2', 'S3', 'S4', 'S5', 'S6'])
-
 print("Original DataFrame:")
 print(student_data)
-
-# Group the data by school code and class
 result = student_data.groupby(['school_code', 'class'])
-
 print("\nSplit the data on school_code and class wise:")
 for name, group in result:
     print("\nGroup:")
