@@ -6,9 +6,5 @@ data = {
     'C': [1, 2, 3, None, 5]
 }
 df = pd.DataFrame(data)
-
-# Keep rows with at least 2 NaN values
 df_with_nan = df.dropna(thresh=2)
-
-# Display the DataFrame with rows containing at least 2 NaN values
 print(df_with_nan)
