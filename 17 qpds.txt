@@ -9,12 +9,8 @@ student_data = pd.DataFrame({
     'weight': [35, 32, 33, 30, 31, 32],
     'address': ['street1', 'street2', 'street3', 'street1', 'street2', 'street4']
 }, index=['S1', 'S2', 'S3', 'S4', 'S5', 'S6'])
-
 print("Original DataFrame:")
 print(student_data)
-
-# Group the data by school code and calculate mean, min, and max age
 grouped_single = student_data.groupby('school_code').agg({'age': ['mean', 'min', 'max']})
-
 print("\nMean, min, and max value of age for each school:")
 print(grouped_single)
