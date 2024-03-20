@@ -1,7 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-
-# Sample data
 men_means = (22, 30, 35, 35, 26)
 women_means = (25, 32, 30, 35, 29)
 labels = ['Group 1', 'Group 2', 'Group 3', 'Group 4', 'Group 5']
